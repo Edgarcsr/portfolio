@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --background-color: rgb(248, 233, 214);
+    --hover-color: #f33977;
+    --base-color: #3A2E35;
+    --orange-color: rgb(255, 176, 80);
+    --transition-speed: 0.3s ease;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+::-webkit-scrollbar-track {
+    background: #3A2E35; /* Define a cor de fundo da trilha */
+    border: none;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #626262; /* Semi-transparente */
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #858585; /* Menos transparente ao passar o mouse */
+  }
+  
+  /* Define a largura da barra de rolagem */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+body {
+    min-height: 100vh;
+    background-image: url("tentacle-vtuber.jpeg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+#bloco{
+    margin: auto;
+    background-color: #ffffff;
+    width: 20rem;
+    border-radius: 5px;
+}
+
+/* Seleção de texto */
+#bio h2::selection, #bio h3::selection {
+    color: #ffffff;
+    background-color: #f33977;
+}
+::selection{
+    background-color: rgb(255, 200, 133);
+}
+/* Estilos de bio */
+#bio {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 176, 80);
+    border-radius: 5px 5px 0 0;
+    padding: 15px 20px;
+    width: 15rem;
+}
+
+/* Estilos da imagem de perfil */
+.perfilimg {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url("sara.jpg");
+    background-size: 175%;
+    background-position: 80% 10%;
+    margin: 0 auto;
+    transition: background-size 0.5s ease, border-radius 0.5s ease;
+}
+.perfilimg:hover {
+    background-size: 190%; /* Aumenta o tamanho da imagem de fundo */
+    border-radius: 15px;
+}
+
+/* Estilos de nome */
+#nome {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+#nome h2, #nome h3 {
+    transition: letter-spacing 0.3s ease; /* Suaviza a transição */
+}
+
+#nome h2 {
+    font-weight: 500;
+    margin-bottom: -5px;
+}
+
+#nome h2:hover, #nome h3:hover {
+    letter-spacing: 2px; /* Ajusta o espaçamento entre as letras no hover */
+}
+
+#nome h3 {
+    margin: 0;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+/* Estilos sobre mim */
+#about_me, .contact, #redes_sociais {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    padding: 10px 20px 0 20px;
+    width: 15rem;
+    margin-bottom: 0;
+}
+#about_me h2, .contact h2, #redes_sociais h2 {
+    transition: letter-spacing 0.3s ease; /* Suaviza a transição */
+    margin-bottom: 10px;
+}
+#about_me h2:hover, .contact h2:hover, #redes_sociais h2:hover  {
+    letter-spacing: 2px; /* Ajusta o espaçamento entre as letras no hover */
+}
+#about_me p {
+    margin: 0;
+    text-indent: 50px; /* Ajuste o valor conforme necessário */
+    text-align: justify;
+}
+
+/* Animação arco-íris */
+.rainbow:hover {
+    animation: rainbow-animation 1s infinite ease;
+}
+@keyframes rainbow-animation {
+    0% {color: var(--orange-color);}
+    50% {color: var(--hover-color);}
+    100% {color: var(--orange-color);}
+}
+
+/* Estilos de contato */
+  .contact div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .contact i, .contact span, .contact a {
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .contact i {
+    width: 20px;
+    margin-right: 10px;
+    color: var(--base-color);
+  }
+  
+  .contact span, .contact a {
+    flex-grow: 1;
+    text-decoration: none;
+    color: var(--base-color);
+  }
+  
+  .contact div:hover i, .website span:hover {
+    color: var(--hover-color);
+  }
+  
+  /* Animação underline para links */
+  .animated-underline {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .animated-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 2px;
+    background-color: var(--hover-color);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+    opacity: 1;
+  }
+  
+  .animated-underline:hover::after, .animated-underline:focus::after {
+    transform: scaleX(1);
+  }
+
+#redes_sociais {
+    border-radius: 0 0 5px 5px;
+}
+#redes_sociais h2 {
+    margin-bottom: 20px;
+}
+
+.icones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os ícones */
+    padding: 0 0 20px 0;
+}
+
+.icones a {
+    padding: 6px;
+    width: 36px;
+    height: 36px;
+    background-color: var(--orange-color);
+    text-decoration: none;
+    display: flex;
+    /* width: calc(50% - 10px); Ajusta a largura para caber 2 ícones por linha considerando o espaçamento */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    color: var(--base-color);
+    font-size: 36px; /* Tamanho dos ícones */
+    transition: all var(--transition-speed);
+    border-radius: 50%;
+}
+
+.icones a:hover {
+    box-shadow: 0 0 15px var(--hover-color);
+    border-radius: 9px;
+    color: #ffffff;
+    background-color: var(--hover-color);
+}
