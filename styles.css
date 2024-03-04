@@ -31,6 +31,7 @@
   }
   
 body {
+    display: flex;
     min-height: 100vh;
     background-image: url("tentacle-vtuber.jpeg");
     background-size: cover; 
@@ -40,8 +41,10 @@ body {
 
 #bloco{
     margin: auto;
+    display: flex;
+    gap: 16px;
     background-color: #ffffff;
-    width: 20rem;
+    min-width: 50rem;
     border-radius: 5px;
 }
 
@@ -68,9 +71,10 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url("sara.jpg");
+    background-image: url("Penguin\ Waddle.gif");
     background-size: 175%;
-    background-position: 80% 10%;
+    /* background-position: 80% 10%; */
+    background-position: 50% 50%;
     margin: 0 auto;
     transition: background-size 0.5s ease, border-radius 0.5s ease;
 }
@@ -223,4 +227,68 @@ body {
     border-radius: 9px;
     color: #ffffff;
     background-color: var(--hover-color);
+}
+
+
+#central{
+  display: flex;
+  flex-direction: column;
+}
+
+#skills {
+  width: 100%; /* Ajuste a largura conforme necessário */
+  margin: 20px; /* Adiciona um pouco de margem ao redor para visibilidade */
+}
+
+#skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Cria duas colunas com larguras iguais */
+  gap: 10px; /* Espaçamento entre as colunas e linhas */
+}
+
+.skill-bar {
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 8px;
+}
+
+.skill-percentage {
+  background-color: var(--orange-color);
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.5s ease, background-color 0.3s ease; /* Combina transições */
+}
+
+.skill:hover .skill-percentage {
+  background-color: var(--hover-color); /* Muda a cor de fundo ao passar o mouse sobre .skill */
+}
+.skills-title {
+  display: flex;
+  align-items: center; /* Alinha o ícone com o texto */
+  gap: 10px; /* Espaço entre o ícone e o texto */
+  width: 100%; /* Ou uma largura fixa específica, se necessário */
+}
+
+.skills-title i {
+  background-color: var(--orange-color);
+  color: white; /* Cor do ícone */
+  border-radius: 50%; /* Torna o fundo do ícone circular */
+  width: 40px; /* Largura fixa */
+  height: 40px; /* Altura fixa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-radius 0.3s ease, transform 0.3s ease; /* Ajustado para transform */
+}
+
+.skills-title i:hover {
+  border-radius: 15px; /* Raio de borda para tornar o ícone quadrado arredondado */
+  transform: scale(1.1); /* Aumenta ligeiramente o ícone */
+}
+#skills h2 {
+  transition: letter-spacing 0.3s ease; /* Suaviza a transição */
+}
+
+#skills h2:hover {
+  letter-spacing: 2px; /* Ajusta o espaçamento entre as letras no hover */
 }
