@@ -285,10 +285,3 @@ body {
   border-radius: 15px; /* Raio de borda para tornar o ícone quadrado arredondado */
   transform: scale(1.1); /* Aumenta ligeiramente o ícone */
 }
-#skills h2 {
-  transition: letter-spacing 0.3s ease; /* Suaviza a transição */
-}
-
-#skills h2:hover {
-  letter-spacing: 2px; /* Ajusta o espaçamento entre as letras no hover */
-}
